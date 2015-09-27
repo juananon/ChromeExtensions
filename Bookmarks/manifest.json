@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Programarfacil 'Paluego'",
+  "description": "Extensión que permite guardar todas las pestañas abiertas en una carpeta de la barra de marcadores",
+  "version": "0.1",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "tabs",
+   "bookmarks"
+ ],
+ "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["popup.js"]
+  }]
+
+}
